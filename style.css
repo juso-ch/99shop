@@ -1,19 +1,11 @@
 /* CSS Document */
-@font-face {
-    font-family: Klima;
-	font-weight: normal;
-    src: url("fonts/klima-regular.otf") format("opentype");
-}
+@import './node_modules/bootstrap-icons/font/bootstrap-icons.css';
 
-@font-face {
-    font-family: Klima;
-	font-weight: bold;
-    src: url("fonts/klima-bold.otf") format("opentype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;1,300;1,400&display=swap');
 
 body {
 	background-color: #171717;
-	font-family: 'Klima', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	color: #EDEDED;
 	overflow-x: hidden;
 }
@@ -72,6 +64,7 @@ a:hover {
 
 .btn {
 	border-radius: 0px;
+	width: 100%;
 }
 
 /* Card Content */
@@ -96,3 +89,48 @@ h5 {
 	color: #6A6A6A;
 }
 
+.plus-btn {
+	background-color: #D20729;
+	border: #D20729;
+	color: #EDEDED;
+}
+  
+.plus-btn:hover {
+	background-color: #D20729;
+}
+  
+.plus-btn:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.plus-btn:active {
+	background-color: #D20729;
+	border-color: #D20729;
+	color: #EDEDED;
+}
+
+.minus-btn {
+	background-color: #EDEDED;
+	border: #D20729 1px solid;
+	color: #D20729;
+	outline: #D20729;
+}
+  
+.minus-btn:hover {
+	background-color: #EDEDED;
+}
+  
+.minus-btn:focus {
+	outline: none;
+	box-shadow: none;
+	color: #D20729;
+	border: #D20729 1px solid;
+}
+
+.minus-btn:active {
+	background-color: #EDEDED;
+	color: #D20729;
+	border: #D20729 1px solid;
+
+}
