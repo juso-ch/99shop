@@ -73,7 +73,7 @@ a:hover {
 
 /* Card Content */
 .card {
-	background-color: #444 !important;
+	background-color: #444;
 }
 
 .card-img-top {
@@ -88,8 +88,6 @@ h5 {
 	color: #1A1A1A;
 	font-weight: bold;
 }
-
-
 
 .card-text {
 	color: #6A6A6A;

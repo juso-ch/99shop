@@ -521,7 +521,7 @@ var shoppingCart = (function() {
   
     // Load cart
   function loadCart() {
-    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+    //cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
   }
   if (sessionStorage.getItem("shoppingCart") != null) {
     loadCart();
@@ -602,8 +602,6 @@ var shoppingCart = (function() {
     saveCart();
 
   }
-
-
   // cart : Array
   // Item : Object/Class
   // addItemToCart : Function
@@ -658,6 +656,8 @@ $('.minus-btn').click(function(event) {
 
   shoppingCart.removeItemFromCart(name, price);
 })
+		
+
 /*
 function displayCart() {
   var cartArray = shoppingCart.listCart();
@@ -690,7 +690,6 @@ $('.show-cart').on("change", ".item-count", function(event) {
 });
 
 displayCart();
-		
 		
 		
 		
