@@ -34,13 +34,9 @@
 				<img src="img/logo.svg" alt="" width="60" height="60" class="d-inline-block">
 			</a>
 			
-
 			<p id="balance">flo</p>
 			
-			
-			
-			
-			<a id="icon-cart" data-bs-toggle="modal" href="#exampleModalToggle">
+			<a id="icon-cart" data-bs-toggle="modal" href="#cart">
 				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
 					<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
 				</svg>
@@ -421,15 +417,17 @@
 				
 		</section>
 		
-		<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+		<div class="modal fade" id="cart" aria-hidden="true" aria-labelledby="cartLabel" tabindex="-1">
 		  <div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 			  <div class="modal-header">
-				<h5 class="modal-title" id="exampleModalToggleLabel">Einkaufswagen</h5>
+				<h5 class="modal-title" id="cartLabel">Einkaufswagen</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			  </div>
 			  <div class="modal-body">
-				Show a second modal and hide this one with the button below.
+				  <p id="cartList">
+					  Der Einkaufswagen ist aktuell noch leer.
+				  </p>
 			  </div>
 			  <div class="modal-footer">
 				<button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Zur Kasse</button>
@@ -441,50 +439,18 @@
 		  <div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 			  <div class="modal-header">
-				<h5 class="modal-title" id="exampleModalToggleLabel2">Bezahlen</h5>
+				<h5 class="modal-title" id="exampleModalToggleLabel2">Bestätigung</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			  </div>
 			  <div class="modal-body">
-				Hide this modal and show the first with the button below.
+				Vielen Dank für dein Interesse an der 99% Initiative! 
 			  </div>
 			  <div class="modal-footer">
-				<button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Zurück</button>
+				<button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Zur 99% Seite</button>
 			  </div>
 			</div>
 		  </div>
 		</div>
-		
-		
-		
-		 <!-- Modal -->
-<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table class="show-cart table">
-          
-        </table>
-        <div>Total price: $<span class="total-cart"></span></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Order now</button>
-      </div>
-    </div>
-  </div>
-</div> 
-		
-		
-		<div class="row">
-        <div class="col">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
-    </div>
 		
 	</main>
 	
@@ -602,6 +568,42 @@ var shoppingCart = (function() {
     saveCart();
 
   }
+  
+  // Count cart 
+  obj.totalCount = function() {
+    var totalCount = 0;
+    for(var item in cart) {
+      totalCount += cart[item].count;
+    }
+    return totalCount;
+  }
+  
+  // Total cart
+  obj.totalCart = function() {
+    var totalCart = 0;
+    for(var item in cart) {
+      totalCart += cart[item].price * cart[item].count;
+    }
+    return Number(totalCart.toFixed(2));
+  }
+
+  // List cart
+  obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+      item = cart[i];
+      itemCopy = {};
+      for(p in item) {
+        itemCopy[p] = item[p];
+
+      }
+      itemCopy.total = Number(item.price * item.count).toFixed(2);
+      cartCopy.push(itemCopy)
+    }
+    return cartCopy;
+  }
+  
+  
   // cart : Array
   // Item : Object/Class
   // addItemToCart : Function
@@ -634,9 +636,6 @@ $(document).ready(function(){
 	balance.innerHTML = formatter.format(currentBalance);
 });
 		
-		
-		
-
 
 $('.plus-btn').click(function(event) {
   event.preventDefault();
@@ -657,9 +656,37 @@ $('.minus-btn').click(function(event) {
   shoppingCart.removeItemFromCart(name, price);
 })
 		
+		
+$('#icon-cart').click(function(){
+	
+  var cartArray = shoppingCart.listCart();
+  var output = "";
+  for(var i in cartArray) {
+	  
+	  output += "<tr>"
+		  + "<td>" + cartArray[i].name + "</td>"
+	  	  + "<td>" + cartArray[i].price + "</td>";
+	  
+	  /*
+    output += "<tr>"
+      + "<td>" + cartArray[i].name + "</td>" 
+      + "<td>(" + cartArray[i].price + ")</td>"
+      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+      + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+      + " = " 
+      + "<td>" + cartArray[i].total + "</td>" 
+      +  "</tr>";*/
+  }
+	
+  document.getElementById("cartList").innerHTML = output;
+	
+});
+		
 
-/*
 function displayCart() {
+  console.log("X");
   var cartArray = shoppingCart.listCart();
   var output = "";
   for(var i in cartArray) {
@@ -674,24 +701,25 @@ function displayCart() {
       + "<td>" + cartArray[i].total + "</td>" 
       +  "</tr>";
   }
+  console.log(output);
   $('.show-cart').html(output);
   $('.total-cart').html(shoppingCart.totalCart());
   $('.total-count').html(shoppingCart.totalCount());
 }
 
+
 // Delete item button
 
 // Item count input
 $('.show-cart').on("change", ".item-count", function(event) {
+   console.log("Y");
    var name = $(this).data('name');
    var count = Number($(this).val());
   shoppingCart.setCountForItem(name, count);
   displayCart();
 });
 
-displayCart();
-		
-		
+// displayCart();
 		
 		
 /*	
@@ -703,6 +731,7 @@ $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
+  .not('[href="#cart"]')
   .click(function(event) {
     // On-page links
     if (
