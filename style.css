@@ -75,9 +75,8 @@ a:hover {
 }
 
 /* Card Content */
-.card {
-	background-color: #444;
-	border-radius: 0px;
+.card {
+	border: none;
 }
 
 .card-img-top {
@@ -87,12 +86,32 @@ a:hover {
     object-fit: cover;
 }
 
-h5 {
-	color: #1A1A1A;
+.card h5 {
+	color: #444;
 	font-weight: bold;
 }
 
 .card-text {
 	color: #6A6A6A;
+}
+
+
+
+/* Modal Content */
+.modal-content {
+	background-color: #444;
+	color: #EDEDED;
+}
+
+.modal h5 {
+	font-weight: bold;
+}
+
+.modal-header {
+	border: none;
+}
+
+.modal-footer {
+	border: none;
 }
 
