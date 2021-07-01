@@ -68,9 +68,8 @@ a:hover {
 }
 
 /* Card Content */
-.card {
-	background-color: #444;
-	border-radius: 0px;
+.card {
+	border: none;
 }
 
 .card-body {
@@ -178,4 +177,22 @@ h5 {
 
 .nav-title:hover {
 	color: #EDEDED;
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #444;
+	color: #EDEDED;
+}
+
+.modal h5 {
+	font-weight: bold;
+}
+
+.modal-header {
+	border: none;
+}
+
+.modal-footer {
+	border: none;
 }
