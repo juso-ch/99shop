@@ -14,7 +14,7 @@
 
 <body>
 	<header class="flex-column">
-		<h1 id="header-text">Was kann alles gekauft werden mit dem Geld, das mit der 99% Initiative in einem Jahr endlich mehr eingenommen wird?</h1>
+		<h1 id="header-text">Was kann man alles kaufen mit dem Geld, das mit der 99% Initiative in einem Jahr endlich mehr eingenommen wird?</h1>
 		<a id="header-button" class="text-center" href="#balance">Einkauf starten <br>
 		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
 			<path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
@@ -66,34 +66,51 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col">
-					<div class="card mx-lg-5 mx-3 my-3">
-						<img src="img/wc.png" class="card-img-top" alt="...">
-						<div class="card-body text-center">
-							<h5>M-Budget WC-Papier</h5>
-							<p class="card-text">CHF 8.00</p>
-							
-							<div class="btn-group d-flex" role="group">
-								<button type="button" class="minus-btn btn btn-danger" data-name="M-Budget WC-Papier" data-price="8">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
-										<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-										<path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-									</svg>	
+					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
+						<div class="card-img">
+							<div class="card-counter" id="qty-M-Budget WC-Papier">0</div>
+							<img src="img/wc.png" class="card-img-top" alt="...">
+						</div>
+						<div class="card-body">
+							<div class="mx-3">
+								<div class="cart-product">M-Budget WC-Papier</div>
+								<p class="card-price">CHF 8.00</p>
+								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="M-Budget WC-Papier" data-price="3">
+								<i class="icon bi-cart-fill"></i>
+									In den Warenkorb
 								</button>
-								<button type="button" class="btn flex-grow-1" id="qty-M-Budget WC-Papier">
-									0
-								</button>
-								<button type="button" class="plus-btn btn btn-success" data-name="M-Budget WC-Papier" data-price="8">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-										<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-										<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-									</svg>
+								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="M-Budget WC-Papier" data-price="3">
+									Entfernen
 								</button>
 							</div>
 						</div>
 					</div>
 				</div>
+
+				<div class="col">
+					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
+						<div class="card-img">
+							<div class="card-counter" id="qty-M-Budget WC-Papier">0</div>
+							<img src="img/wc.png" class="card-img-top" alt="...">
+						</div>
+						<div class="card-body">
+							<div class="mx-3">
+								<div class="cart-product">M-Budget WC-Papier</div>
+								<p class="card-price">CHF 8.00</p>
+								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="M-Budget WC-Papier" data-price="3">
+								<i class="icon bi-cart-fill"></i>
+									In den Warenkorb
+								</button>
+								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="M-Budget WC-Papier" data-price="3">
+									Entfernen
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 				
 				<div class="col">
 					<div class="card mx-lg-5 mx-3 my-3">
@@ -127,7 +144,7 @@
 					<div class="card mx-lg-5 mx-3 my-3">
 						<img src="img/dinner.jpg" class="card-img-top" alt="...">
 						<div class="card-body text-center">
-							<h5>Dinner for one im teuersten Restaurant der Schweiz</h5>
+							<h5>Dinner im besten Restaurant der Schweiz</h5>
 							<p class="card-text">CHF 390.00</p>
 							
 							<div class="btn-group d-flex" role="group">
@@ -155,7 +172,7 @@
 					<div class="card mx-lg-5 mx-3 my-3">
 						<img src="img/vw.jpg" class="card-img-top" alt="...">
 						<div class="card-body text-center">
-							<h5>VW Golf</h5>
+							<h5>1x VW Golf</h5>
 							<p class="card-text">CHF 21'600.00</p>
 							
 							<div class="btn-group d-flex" role="group">
@@ -169,34 +186,6 @@
 									0
 								</button>
 								<button type="button" class="plus-btn btn btn-success" data-name="VW Golf" data-price="21600">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-										<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-										<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-									</svg>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col">
-					<div class="card mx-lg-5 mx-3 my-3">
-						<img src="img/gold.jpg" class="card-img-top" alt="...">
-						<div class="card-body text-center">
-							<h5>5 Kg Gold</h5>
-							<p class="card-text">CHF 250'000.00</p>
-							
-							<div class="btn-group d-flex" role="group">
-								<button type="button" class="minus-btn btn btn-danger" data-name="12 Kg Gold" data-price="250000">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
-										<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-										<path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-									</svg>	
-								</button>
-								<button type="button" class="btn flex-grow-1" id="qty-12 Kg Gold">
-									0
-								</button>
-								<button type="button" class="plus-btn btn btn-success" data-name="12 Kg Gold" data-price="250000">
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
 										<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
 										<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -239,7 +228,7 @@
 					<div class="card mx-lg-5 mx-3 my-3">
 						<img src="img/taxi.jpg" class="card-img-top" alt="...">
 						<div class="card-body text-center">
-							<h5>Eine Fahrt um die Erde in einem Zürcher Taxi</h5>
+							<h5>Fahrt um die Erde in Zürcher Taxi</h5>
 							<p class="card-text">CHF 200'000'000.00</p>
 							
 							<div class="btn-group d-flex" role="group">
@@ -267,7 +256,7 @@
 					<div class="card mx-lg-5 mx-3 my-3">
 						<img src="img/vater.jpg" class="card-img-top" alt="...">
 						<div class="card-body text-center">
-							<h5>Ein Jahr Vaterschaftsurlaub für alle Väter</h5>
+							<h5>Vaterschaftsurlaub</h5>
 							<p class="card-text">CHF 230'000'000.00</p>
 							
 							<div class="btn-group d-flex" role="group">
@@ -281,34 +270,6 @@
 									0
 								</button>
 								<button type="button" class="plus-btn btn btn-success" data-name="Vaterschaftsurlaub" data-price="230000000">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-										<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-										<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-									</svg>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col">
-					<div class="card mx-lg-5 mx-3 my-3">
-						<img src="img/freibetrag.jpg" class="card-img-top" alt="...">
-						<div class="card-body text-center">
-							<h5>Erhöhung Freibetrag; Steuererleichterung für Einkommen bis xxx</h5>
-							<p class="card-text">CHF 500'000'000.00</p>
-							
-							<div class="btn-group d-flex" role="group">
-								<button type="button" class="minus-btn btn btn-danger" data-name="Erhöhung Freibetrag" data-price="500000000">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
-										<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-										<path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-									</svg>	
-								</button>
-								<button type="button" class="btn flex-grow-1" id="qty-Erhöhung Freibetrag">
-									0
-								</button>
-								<button type="button" class="plus-btn btn btn-success" data-name="Erhöhung Freibetrag" data-price="500000000">
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
 										<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
 										<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -437,7 +398,7 @@
 						<div class="card-body text-center">
 							<h5>Vermögen der Familie Blocher</h5>
 							<p class="card-text">CHF 16'000’000’000.00</p>
-							
+
 							<div class="btn-group d-flex" role="group">
 								<button type="button" class="minus-btn btn btn-danger" data-name="Vermögen der Familie Blocher" data-price="16000000000">
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
