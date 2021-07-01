@@ -16,13 +16,20 @@ var shoppingCart = (function() {
   obj.addItemToCart = function(name, price, count) {
 	if (currentBalance-price < 0) {
 		return;
-	}    
-	currentBalance = currentBalance - price;
-  	balance.innerHTML = formatter.format(currentBalance);
-	  
+	}
+
     for(var item in cart) {
       if(cart[item].name === name) {
+		  
+		if (cart[item].count >= 9) {
+			console.log("X");
+			return;
+		}
+		  
         cart[item].count ++;
+		
+		currentBalance = currentBalance - price;
+  		balance.innerHTML = formatter.format(currentBalance);
 		  
 		var currentItem = document.getElementById("qty-"+name);
 		currentItem.innerHTML = cart[item].count;
