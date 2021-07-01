@@ -49,13 +49,14 @@ a:hover {
 }
 
 #balance {
-	font-size: 48px;
+	font-size: 44px;
 	font-weight: 400;
 	font-style: italic;
 }
 
 #icon-cart {
 	padding-right: 15px;
+	margin-left: 8%;
 }
 
 #icon-cart:hover {

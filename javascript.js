@@ -17,6 +17,8 @@ var shoppingCart = (function() {
 	if (currentBalance-price <= 0) {
 		return;
 	}
+	  
+	var newBalance;
 
     for(var item in cart) {
       if(cart[item].name === name) {
@@ -30,14 +32,17 @@ var shoppingCart = (function() {
 		var currentItem = document.getElementById("qty-"+name);
 		currentItem.innerHTML = cart[item].count;
 		
+		newBalance = currentBalance - price;		  
+		animateValue(currentBalance, newBalance);  
 		currentBalance = currentBalance - price;
-  		balance.innerHTML = formatter.format(currentBalance);
+		  
         return;
       }
     }
 	  
+	newBalance = currentBalance - price;		  
+	animateValue(currentBalance, newBalance);  
 	currentBalance = currentBalance - price;
-  	balance.innerHTML = formatter.format(currentBalance);
 	  
     var item = new Item(name, price, count);
     cart.push(item);
@@ -67,8 +72,9 @@ var shoppingCart = (function() {
         if(cart[item].name === name) {			
           cart[item].count --;
 			
+		  newBalance = currentBalance + price;		  
+		  animateValue(currentBalance, newBalance);  
 		  currentBalance = currentBalance + price;
-  	  	  balance.innerHTML = formatter.format(currentBalance);
 			
 		  var currentItem = document.getElementById("qty-"+name);
 	  	  currentItem.innerHTML = cart[item].count;
@@ -160,7 +166,7 @@ $('#icon-cart').click(function(){
   var totalCount = document.createElement("P");
   var br = document.createElement("BR");
   total.appendChild(document.createTextNode("Total:"));
-  totalCount.appendChild(document.createTextNode("CHF " + shoppingCart.totalCart()));
+  totalCount.appendChild(document.createTextNode(formatter.format(shoppingCart.totalCart())));
 	
   cartContent.appendChild(table);
   cartContent.appendChild(br);
@@ -173,8 +179,8 @@ $('#icon-cart').click(function(){
 var formatter = new Intl.NumberFormat('de-CH', {
   style: 'currency',
   currency: 'CHF',
-  minimumFractionDigits: 0,
-  maximumFractionDigits: 0,
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
 });
 
 var balance = document.getElementById("balance");
@@ -184,6 +190,30 @@ var currentBalance = initialBalance;
 $(document).ready(function(){
 	balance.innerHTML = formatter.format(currentBalance);
 });
+
+
+// Animate countdown
+function animateValue(start, end) {
+    if (start === end) return;
+    var range = end - start;
+    var current = start;
+	console.log(Math.floor(range / 150));
+	if (Math.abs(Math.floor(range/150)) > 5) {
+		var increment = Math.floor(range / 100);
+	} else {
+		var increment = end > start? 2 : -2;
+	}
+	console.log(increment);
+    var stepTime = 4;
+    var obj = document.getElementById("balance");
+    var timer = setInterval(function() {
+        current += increment;
+        obj.innerHTML = formatter.format(current);
+        if (current == end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
 
 
 // Smooth scrolling
