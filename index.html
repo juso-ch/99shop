@@ -24,11 +24,12 @@
 	
 	<nav class="navbar sticky-top mb-5">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand nav-title" href="#">
 				<img src="img/logo.svg" alt="" width="60" height="60" class="d-inline-block">
+				Shop
 			</a>
 			
-			<p id="balance">flo</p>
+			<div id="balance"></div>
 			
 			<a id="icon-cart" data-bs-toggle="modal" href="#cart">
 
@@ -45,27 +46,21 @@
 			<div class="row row-cols-1 row-cols-md-3 g-5">
 				
 				<div class="col">
-					<div class="card mx-lg-5 mx-3 my-3">
-						<img src="img/icecream.jpg" class="card-img-top" alt="...">
-						<div class="card-body text-center">
-							<h5>1x Glacé</h5>
-							<p class="card-text">CHF 3</p>
-							
-							<div class="btn-group d-flex" role="group">
-								<button type="button" class="minus-btn btn btn-danger" data-name="Glacé" data-price="3">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
-										<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-										<path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-									</svg>	
+					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
+						<div class="card-img">
+							<div class="card-counter" id="qty-Glacé">0</div>
+							<img src="img/icecream.jpg" class="card-img-top" alt="...">
+						</div>
+						<div class="card-body">
+							<div class="mx-3">
+								<div class="cart-product">Glacé</div>
+								<p class="card-price">CHF 3.00</p>
+								<button type="button" class="plus-btn btn btn-lg btn-primary mb-" data-name="icecream" data-price="3">
+								<i class="icon bi-cart-fill"></i>
+									In den Warenkorb
 								</button>
-								<button type="button" class="btn flex-grow-1" id="qty-Glacé">
-									0
-								</button>
-								<button type="button" class="plus-btn btn btn-success" data-name="Glacé" data-price="3">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-										<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-										<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-									</svg>
+								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="icecream" data-price="3">
+									Entfernen
 								</button>
 							</div>
 						</div>
