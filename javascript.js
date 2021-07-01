@@ -197,8 +197,14 @@ function animateValue(start, end) {
     if (start === end) return;
     var range = end - start;
     var current = start;
-    var increment = end > start? 1 : -1;
-    var stepTime = Math.abs(Math.floor(800 / range));
+	console.log(Math.floor(range / 150));
+	if (Math.abs(Math.floor(range/150)) > 5) {
+		var increment = Math.floor(range / 100);
+	} else {
+		var increment = end > start? 2 : -2;
+	}
+	console.log(increment);
+    var stepTime = 4;
     var obj = document.getElementById("balance");
     var timer = setInterval(function() {
         current += increment;
