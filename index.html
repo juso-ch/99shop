@@ -24,11 +24,12 @@
 	
 	<nav class="navbar sticky-top mb-5">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand nav-title" href="#">
 				<img src="img/logo.svg" alt="" width="60" height="60" class="d-inline-block">
+				Shop
 			</a>
 			
-			<p id="balance">flo</p>
+			<div id="balance"></div>
 			
 			<a id="icon-cart" data-bs-toggle="modal" href="#cart">
 
@@ -45,20 +46,23 @@
 			<div class="row row-cols-1 row-cols-md-3 g-5">
 				
 				<div class="col">
-					<div class="card mx-lg-5 mx-3 my-3">
-						<img src="img/icecream.jpg" class="card-img-top" alt="...">
-						<div class="card-body text-center">
-							<h5>1x Glacé</h5>
-							<p class="card-text">CHF 3</p>
-							<p id="qty-icecream">0</p>
-							<button type="button" class="plus-btn btn btn-primary" data-name="icecream" data-price="3">
-								<i class="icon bi-cart"></i>
-								In den Warenkorb
-							</button>
-							<button type="button" class="minus-btn btn btn-outline-primary" data-name="icecream" data-price="3">
-								<i class="icon bi-x-circle"></i>	
-								Entfernen
-							</button>
+					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
+						<div class="card-img">
+							<div class="card-counter" id="qty-icecream">0</div>
+							<img src="img/icecream.jpg" class="card-img-top" alt="...">
+						</div>
+						<div class="card-body">
+							<div class="mx-3">
+								<div class="cart-product">Glacé</div>
+								<p class="card-price">CHF 3.00</p>
+								<button type="button" class="plus-btn btn btn-lg btn-primary mb-" data-name="icecream" data-price="3">
+								<i class="icon bi-cart-fill"></i>
+									In den Warenkorb
+								</button>
+								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="icecream" data-price="3">
+									Entfernen
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
