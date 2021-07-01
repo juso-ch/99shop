@@ -200,7 +200,7 @@ function animateValue(start, end) {
 	if (Math.abs(Math.floor(range/10)) > 5) {
 		var increment = Math.floor(range / 10);
 	} else {
-		var increment = end > start? 2 : -2;
+		var increment = end > start? 1 : -1;
 	}
     var stepTime = 50;
     var obj = document.getElementById("balance");
