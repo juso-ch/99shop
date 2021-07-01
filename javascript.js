@@ -14,29 +14,31 @@ var shoppingCart = (function() {
 	
   // Add to cart
   obj.addItemToCart = function(name, price, count) {
-	if (currentBalance-price < 0) {
+	if (currentBalance-price <= 0) {
 		return;
 	}
 
     for(var item in cart) {
       if(cart[item].name === name) {
 		  
-		if (cart[item].count >= 9) {
-			console.log("X");
+		if (cart[item].count >= 99) {
 			return;
 		}
 		  
         cart[item].count ++;
-		
-		currentBalance = currentBalance - price;
-  		balance.innerHTML = formatter.format(currentBalance);
 		  
 		var currentItem = document.getElementById("qty-"+name);
 		currentItem.innerHTML = cart[item].count;
-		  
+		
+		currentBalance = currentBalance - price;
+  		balance.innerHTML = formatter.format(currentBalance);
         return;
       }
     }
+	  
+	currentBalance = currentBalance - price;
+  	balance.innerHTML = formatter.format(currentBalance);
+	  
     var item = new Item(name, price, count);
     cart.push(item);
 	  
