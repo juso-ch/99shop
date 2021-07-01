@@ -20,6 +20,7 @@ header {
 }
 
 #header-button {
+	font-size: 2em;
 	margin-top: 10vh;
 	transition: transform .3s; /* Animation */ 
 }
@@ -32,11 +33,6 @@ nav {
 	background-color: #D20729;
 	height: 10vh;
 	padding-left: 0.6vw;
-}
-
-h1 {
-	text-transform: uppercase;
-	font-weight: bold;
 }
 
 a {
@@ -116,11 +112,12 @@ a:hover {
 .empfehlung::after{
   position: absolute;
   content: 'Unsere Empfehlung';
+  text-transform: uppercase;
   font-style: italic;
   top: 11px;
   left: -14px;
   padding: 0.5rem;
-  width: 10rem;
+  width: 15rem;
   background:rgba(230,230,230,1.00);
   color: #1A1A1A;
   text-align: center;
@@ -134,13 +131,13 @@ h5 {
 }
 
 .card-price {
-	font-size: 32px;
+	font-size: 1.5em;
 	font-weight: 400;
 	font-style: italic;
 }
 
 .cart-product {
-	font-size: 48px;
+	font-size: 2.5em;
 	font-weight: 800;
 }
 
@@ -177,6 +174,8 @@ h5 {
 	border: #D20729 3px solid;
 	color: #D20729;
 	outline: #D20729;
+	box-shadow: none;
+
 }
   
 .minus-btn:hover {
@@ -192,6 +191,7 @@ h5 {
 
 .minus-btn:active {
 	background-color: #EDEDED;
+	box-shadow: none;
 	color: #D20729;
 	border: #D20729 3px solid;
 
@@ -199,7 +199,7 @@ h5 {
 
 .nav-title {
 	display: inline-block;
-	font-size: 32px;
+	font-size: 2.5rem;
 	font-weight: 800;
 }
 
@@ -223,4 +223,19 @@ h5 {
 
 .modal-footer {
 	border: none;
+}
+
+h1 {
+	font-size: 6em;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: 400;
+}
+
+.nav-icon {
+	font-size: 2rem;
 }

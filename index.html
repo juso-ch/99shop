@@ -7,18 +7,17 @@
 	<meta http-equiv="x-ua-compatible" content="ie-edge">
 	<title>99% Shop</title>
 	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<!-- Custom CSS -->
 	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<header class="flex-column">
-		<h1 id="header-text">Was kann man alles kaufen mit dem Geld, das mit der 99% Initiative in einem Jahr endlich mehr eingenommen wird?</h1>
+		<h1>Ausverkauf für die 99%</h1>	
+		<h2 id="header-text">Was kann man alles kaufen mit dem Geld, welches mit der 99% Initiative in einem Jahr endlich mehr eingenommen wird?</h2>
 		<a id="header-button" class="text-center" href="#balance">Einkauf starten <br>
-		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
-			<path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
-		</svg>
+			<i class="bi-arrow-down"></i>
 		</a>
 	</header>
 	
@@ -32,10 +31,7 @@
 			<div id="balance"></div>
 			
 			<a id="icon-cart" data-bs-toggle="modal" href="#cart">
-
-				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-					<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-				</svg>
+				<i class="nav-icon bi-cart-fill"></i>
 			</a>
 		</div>
 	</nav>
@@ -70,18 +66,18 @@
 				<div class="col">
 					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
 						<div class="card-img">
-							<div class="card-counter" id="qty-M-Budget WC-Papier">0</div>
-							<img src="img/wc.png" class="card-img-top" alt="...">
+							<div class="card-counter" id="qty-WC-Papier">0</div>
+							<img src="img/wcpapier.jpg" class="card-img-top" alt="...">
 						</div>
 						<div class="card-body">
 							<div class="mx-3">
-								<div class="cart-product">M-Budget WC-Papier</div>
+								<div class="cart-product">WC-Papier</div>
 								<p class="card-price">CHF 8.00</p>
-								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="M-Budget WC-Papier" data-price="3">
+								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="WC-Papier" data-price="3">
 								<i class="icon bi-cart-fill"></i>
 									In den Warenkorb
 								</button>
-								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="M-Budget WC-Papier" data-price="3">
+								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="WC-Papier" data-price="3">
 									Entfernen
 								</button>
 							</div>
@@ -119,7 +115,7 @@
 						</div>
 						<div class="card-body">
 							<div class="mx-3">
-								<div class="cart-product">Dinner im besten Restaurant der Schweiz</div>
+								<div class="cart-product">Luxus-Dinner</div>
 								<p class="card-price">CHF 390.00</p>
 								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Dinner im besten Restaurant der Schweiz" data-price="390">
 								<i class="icon bi-cart-fill"></i>
@@ -154,22 +150,44 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="col">
+					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
+						<div class="card-img">
+							<div class="card-counter" id="qty-Kampfjet F-35">0</div>
+							<img src="img/kampfjet.jpg" class="card-img-top" alt="...">
+						</div>
+						<div class="card-body">
+							<div class="mx-3">
+								<div class="cart-product">	Kampfjet F-35</div>
+								<p class="card-price">~ CHF 176'000'000.00</p>
+								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Kampfjet F-35" data-price="176000000">
+								<i class="icon bi-cart-fill"></i>
+									In den Warenkorb
+								</button>
+								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="Kampfjet F-35" data-price="176000000">
+									Entfernen
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				
 				<div class="col">
 					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
 						<div class="card-img">
-							<div class="card-counter" id="qty-Manuel Akanji">0</div>
-							<img src="img/akanji.jpg" class="card-img-top" alt="...">
+							<div class="card-counter" id="qty-Elvedi">0</div>
+							<img src="img/elvedi.jpg" class="card-img-top" alt="...">
 						</div>
 						<div class="card-body">
 							<div class="mx-3">
-								<div class="cart-product">Manuel Akanji</div>
-								<p class="card-price">CHF 33'000'000.00</p>
-								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Manuel Akanji" data-price="33000000">
+								<div class="cart-product">Nico Elvedi</div>
+								<p class="card-price">CHF 30'000'000.00</p>
+								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Elvedi" data-price="30000000">
 								<i class="icon bi-cart-fill"></i>
 									In den Warenkorb
 								</button>
-								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="Manuel Akanji" data-price="33000000">
+								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="Elvedi" data-price="30000000">
 									Entfernen
 								</button>
 							</div>
@@ -185,7 +203,7 @@
 						</div>
 						<div class="card-body">
 							<div class="mx-3">
-								<div class="cart-product">Fahrt um die Erde in Zürcher Taxi</div>
+								<div class="cart-product">Taxifahrt um die Erde</div>
 								<p class="card-price">CHF 200'000'000.00</p>
 								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Fahrt um die Erde in Zürcher Taxi" data-price="200000000">
 								<i class="icon bi-cart-fill"></i>
@@ -224,28 +242,6 @@
 				<div class="col">
 					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
 						<div class="card-img">
-							<div class="card-counter" id="qty-Kampfjet F-35">0</div>
-							<img src="img/kampfjet.jpg" class="card-img-top" alt="...">
-						</div>
-						<div class="card-body">
-							<div class="mx-3">
-								<div class="cart-product">1x Kampfjet F-35</div>
-								<p class="card-price">~ CHF 176'000'000.00</p>
-								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Kampfjet F-35" data-price="176000000">
-								<i class="icon bi-cart-fill"></i>
-									In den Warenkorb
-								</button>
-								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="Kampfjet F-35" data-price="176000000">
-									Entfernen
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col">
-					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
-						<div class="card-img">
 							<div class="card-counter" id="qty-Mona Lisa">0</div>
 							<img src="img/monalisa.jpg" class="card-img-top" alt="...">
 						</div>
@@ -273,7 +269,7 @@
 						</div>
 						<div class="card-body">
 							<div class="mx-3">
-								<div class="cart-product">Gratis ÖV für ein Jahr</div>
+								<div class="cart-product">Ein Jahr Gratis ÖV</div>
 								<p class="card-price">CHF 1'400'000'000.00</p>
 								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Gratis ÖV für ein Jahr" data-price="1400000000">
 								<i class="icon bi-cart-fill"></i>
@@ -285,30 +281,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				
-				<div class="col">
-					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
-						<div class="card-img">
-							<div class="card-counter" id="qty-Vermögen der Familie Blocher">0</div>
-							<img src="img/blocher.jpeg" class="card-img-top" alt="...">
-						</div>
-						<div class="card-body">
-							<div class="mx-3">
-								<div class="cart-product">Vermögen der Familie Blocher</div>
-								<p class="card-price">~ CHF 16'000’000’000.00</p>
-								<button disabled type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Vermögen der Familie Blocher" data-price="16000000000">
-								<i class="icon bi-cart-fill"></i>
-									In den Warenkorb
-								</button>
-								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="Vermögen der Familie Blocher" data-price="16000000000">
-									Entfernen
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				
+				</div>				
 			</div>
 				 
 		</section>
