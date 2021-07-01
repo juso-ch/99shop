@@ -1,10 +1,7 @@
-		
-		
+
 var shoppingCart = (function() {
-  // =============================
-  // Private methods and propeties
-  // =============================
-  cart = [];
+
+  var cart = [];
   
   // Constructor
   function Item(name, price, count) {
@@ -13,16 +10,13 @@ var shoppingCart = (function() {
     this.count = count;
   }
 
-
   var obj = {};
 	
   // Add to cart
   obj.addItemToCart = function(name, price, count) {
-	  
 	if (currentBalance-price < 0) {
 		return;
-	}  
-	  
+	}    
 	currentBalance = currentBalance - price;
   	balance.innerHTML = formatter.format(currentBalance);
 	  
@@ -41,7 +35,6 @@ var shoppingCart = (function() {
 	  
 	var currentItem = document.getElementById("qty-"+name);
 	currentItem.innerHTML = 1;
-	  	
   }
   
   // Set count from item
@@ -78,16 +71,7 @@ var shoppingCart = (function() {
         }
     }
   }
-  
-  // Count cart 
-  obj.totalCount = function() {
-    var totalCount = 0;
-    for(var item in cart) {
-      totalCount += cart[item].count;
-    }
-    return totalCount;
-  }
-  
+
   // Total cart
   obj.totalCart = function() {
     var totalCart = 0;
@@ -116,21 +100,8 @@ var shoppingCart = (function() {
   return obj;
 })();
 
-var formatter = new Intl.NumberFormat('de-CH', {
-  style: 'currency',
-  currency: 'CHF',
-  minimumFractionDigits: 0,
-  maximumFractionDigits: 0,
-});
 
-var balance = document.getElementById("balance");
-var initialBalance = 10000000000;
-var currentBalance = initialBalance;
-
-$(document).ready(function(){
-	balance.innerHTML = formatter.format(currentBalance);
-});
-
+// Add and remove triggers
 $('.plus-btn').click(function(event) {
   event.preventDefault();
 
@@ -149,7 +120,8 @@ $('.minus-btn').click(function(event) {
   shoppingCart.removeItemFromCart(name, price);
 })
 		
-		
+
+// Display shopping cart
 $('#icon-cart').click(function(){
   var cartArray = shoppingCart.listCart();
   var cartContent = document.getElementById("cartList");
@@ -175,9 +147,35 @@ $('#icon-cart').click(function(){
 	tr.appendChild(td);
   }
 	
+  var total = document.createElement("P");
+  var totalCount = document.createElement("P");
+  var br = document.createElement("BR");
+  total.appendChild(document.createTextNode("Total:"));
+  totalCount.appendChild(document.createTextNode("CHF " + shoppingCart.totalCart()));
+	
   cartContent.appendChild(table);
-		
+  cartContent.appendChild(br);
+  cartContent.appendChild(total);
+  cartContent.appendChild(totalCount);
 });
+
+
+// Initialize balance
+var formatter = new Intl.NumberFormat('de-CH', {
+  style: 'currency',
+  currency: 'CHF',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+});
+
+var balance = document.getElementById("balance");
+var initialBalance = 10000000000;
+var currentBalance = initialBalance;
+
+$(document).ready(function(){
+	balance.innerHTML = formatter.format(currentBalance);
+});
+
 
 // Smooth scrolling
 $('a[href*="#"]')
