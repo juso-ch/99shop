@@ -21,16 +21,16 @@
 		</a>
 	</header>
 	
-	<nav class="navbar sticky-top mb-5">
-		<div class="container-fluid">
+	<nav class="navbar sticky-top">
+		<div class="container">
 			<a class="navbar-brand nav-title" href="#top">
 				<img src="img/logo.svg" alt="" width="60" height="60" class="d-inline-block">
-				Shop
+				<div class="d-none d-md-inline">Shop</div>
 			</a>
 			
 			<div id="balance"></div>
-			
-			<a id="icon-cart" data-bs-toggle="modal" href="#cart">
+		
+			<a class="d-none d-md-inline" id="icon-cart" href="#cart">
 				<i class="nav-icon bi-cart-fill"></i>
 			</a>
 		</div>
@@ -154,25 +154,26 @@
 				<div class="col">
 					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
 						<div class="card-img">
-							<div class="card-counter" id="qty-Kampfjet F-35">0</div>
-							<img src="img/kampfjet.jpg" class="card-img-top" alt="...">
+							<div class="card-counter" id="qty-Fahrt um die Erde in Zürcher Taxi">0</div>
+							<img src="img/taxi.jpg" class="card-img-top" alt="...">
 						</div>
 						<div class="card-body">
 							<div class="mx-3">
-								<div class="cart-product">	Kampfjet F-35</div>
-								<p class="card-price">~ CHF 176'000'000.00</p>
-								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Kampfjet F-35" data-price="176000000">
+								<div class="cart-product">Taxifahrt um die Erde</div>
+								<p>in Zürcher Taxi</p>
+								<p class="card-price">CHF 200'000.00</p>
+								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Fahrt um die Erde in Zürcher Taxi" data-price="200000000">
 								<i class="icon bi-cart-fill"></i>
 									In den Warenkorb
 								</button>
-								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="Kampfjet F-35" data-price="176000000">
+								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="Fahrt um die Erde in Zürcher Taxi" data-price="200000000">
 									Entfernen
 								</button>
 							</div>
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col">
 					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
 						<div class="card-img">
@@ -194,22 +195,23 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col">
 					<div class="card mx-lg-5 mx-3 my-3 border-0 rounded-0">
 						<div class="card-img">
-							<div class="card-counter" id="qty-Fahrt um die Erde in Zürcher Taxi">0</div>
-							<img src="img/taxi.jpg" class="card-img-top" alt="...">
+							<div class="card-counter" id="qty-Kampfjet F-35">0</div>
+							<img src="img/kampfjet.jpg" class="card-img-top" alt="...">
 						</div>
 						<div class="card-body">
 							<div class="mx-3">
-								<div class="cart-product">Taxifahrt um die Erde</div>
-								<p class="card-price">CHF 200'000'000.00</p>
-								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Fahrt um die Erde in Zürcher Taxi" data-price="200000000">
+								<div class="cart-product">	Kampfjet F-35</div>
+								<p>aber wer will die schon haben?</p>
+								<p class="card-price">~ CHF 176'000'000.00</p>
+								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Kampfjet F-35" data-price="176000000">
 								<i class="icon bi-cart-fill"></i>
 									In den Warenkorb
 								</button>
-								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="Fahrt um die Erde in Zürcher Taxi" data-price="200000000">
+								<button type="button" class="minus-btn btn btn-lg btn-outline-primary mb-2" data-name="Kampfjet F-35" data-price="176000000">
 									Entfernen
 								</button>
 							</div>
@@ -226,6 +228,7 @@
 						<div class="card-body">
 							<div class="mx-3">
 								<div class="cart-product">Vaterschaftsurlaub</div>
+								<p>für alle Schweizer Väter, ein ganzes Jahr</p>
 								<p class="card-price">CHF 230'000'000.00</p>
 								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Vaterschaftsurlaub" data-price="230000000">
 								<i class="icon bi-cart-fill"></i>
@@ -269,7 +272,8 @@
 						</div>
 						<div class="card-body">
 							<div class="mx-3">
-								<div class="cart-product">Ein Jahr Gratis ÖV</div>
+								<div class="cart-product">Gratis ÖV</div>
+								<p>für die gesamte Schweiz, ein ganzes Jahr</p>
 								<p class="card-price">CHF 1'400'000'000.00</p>
 								<button type="button" class="plus-btn btn btn-lg btn-primary mb-2" data-name="Gratis ÖV für ein Jahr" data-price="1400000000">
 								<i class="icon bi-cart-fill"></i>
@@ -286,7 +290,7 @@
 				 
 		</section>
 		
-		<div class="modal fade" id="cart" aria-hidden="true" aria-labelledby="cartLabel" tabindex="-1">
+		<!--<div class="modal fade" id="cart" aria-hidden="true" aria-labelledby="cartLabel" tabindex="-1">
 		  <div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 			  <div class="modal-header">
@@ -322,7 +326,7 @@
 			  </div>
 			</div>
 		  </div>
-		</div>
+		</div> -->
 		
 	</main>
 	

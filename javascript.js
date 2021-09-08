@@ -14,7 +14,7 @@ var shoppingCart = (function() {
 	
   // Add to cart
   obj.addItemToCart = function(name, price, count) {
-	if (currentBalance-price <= 0) {
+	if (currentBalance-price < 0) {
 		return;
 	}
 	  
