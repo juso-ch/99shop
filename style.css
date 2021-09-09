@@ -127,6 +127,36 @@ a:hover {
   box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
 }
 
+.empfehlung-fr::before{
+	position: absolute;
+	content: '';
+	background: rgba(166,166,166,1.00);
+	height: 36px;
+	width: 36px;
+	top: 2.8rem;
+	left: -0.45rem;
+	transform : rotate(45deg);
+	z-index: -100;
+  }
+  
+  .empfehlung-fr::after{
+	position: absolute;
+	content: 'Notre recommandation';
+	text-transform: uppercase;
+	font-style: italic;
+	top: 11px;
+	left: -14px;
+	padding: 0.5rem;
+	width: 22rem;
+	background:rgba(230,230,230,1.00);
+	color: #1A1A1A;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+	box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+  }
+
 h5 {
 	color: #1A1A1A;
 	font-weight: bold;
@@ -267,6 +297,21 @@ h2 {
 	left: -14px;
 	padding: 0.5rem;
 	width: 15rem;
+	background:rgba(230,230,230,1.00);
+	font-size: 18px;
+  }	
+
+  .empfehlung-fr::before{
+	height: 36px;
+	width: 36px;
+	top: 2.2rem;
+  }
+  
+  .empfehlung-fr::after{
+	top: 11px;
+	left: -14px;
+	padding: 0.5rem;
+	width: 17rem;
 	background:rgba(230,230,230,1.00);
 	font-size: 18px;
   }	
